@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>松田ふとん店｜創業百余年 綿と眠りの匠（岐阜・多治見）</title>
+<meta name="description" content="創業百余年。綿にこだわり、お客様へ格別な寝心地をお届け。綿打ち直し・ふとん水丸洗い・羽毛布団リフォーム・寝具販売。岐阜県多治見市の松田ふとん店。">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="鷲見哲哉">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Elegant theme ===== */
+:root{
+  --bg:#fff8f0; --ink:#1b1a18; --sub:#6f6a66;
+  --deep:#0d6b5c; --gold:#c7a462; --line:#e9e1cd;
+  --card:#fff; --r:16px; --shadow:0 14px 36px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--deep);text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:76px 0;scroll-margin-top:96px}
+
+/* Topbar */
+.topbar{background:linear-gradient(180deg,#fff,#fbf6ea);border-bottom:1px solid var(--line);font-size:13px;color:#5d5a56}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:6px 20px}
+
+/* Header */
+header{position:sticky;top:0;z-index:60;background:color-mix(in srgb,#ffffff 85%, transparent);
+  backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+.logo{display:flex;align-items:center;gap:12px;min-width:220px}
+.mark{width:40px;height:40px;border-radius:12px;
+  background:radial-gradient(120% 120% at 0% 0%, #1aa38d 0%, #0d6b5c 60%, #06453b 100%);
+  display:grid;place-items:center;color:#fff;font-weight:700;letter-spacing:.2em;
+  border:1px solid color-mix(in srgb,#ffffff 50%, var(--gold))}
+.brand-jp{font-family:"Noto Serif JP",serif;font-weight:700;line-height:1}
+.brand-sub{font-size:12px;color:var(--sub)}
+.menu{display:flex;gap:16px;align-items:center;flex:1;justify-content:center;flex-wrap:nowrap}
+.menu a{padding:8px 10px;border-radius:999px;font-weight:600;color:var(--ink);white-space:nowrap}
+.menu a:hover{background:#f1efe6}
+.btn-call{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;
+  color:#fff;background:linear-gradient(180deg,#117e6b,#0c6457);border:1px solid #0b5a4f;
+  box-shadow:0 10px 22px rgba(13,107,92,.25);font-size:14px;white-space:nowrap}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;
+  border:1px solid var(--line);background:linear-gradient(#fff,#faf7ef);color:var(--ink)}
+@media (max-width:1150px){.menu{gap:12px}.brand-sub{display:none}}
+
+/* ===== HERO（コピー→写真の順 / ズレなし） ===== */
+.hero{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fdf3e5 0%,#fff 100%)}
+
+/* コピーは通常フローで中央配置（重ねないからズレない） */
+.hero-copy{
+  width:min(980px,92vw);margin:12px auto 18px;text-align:center;
+  padding:18px 20px;border-radius:14px;background:color-mix(in srgb,#ffffff 86%, transparent);
+  backdrop-filter:saturate(160%) blur(8px);border:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.10)
+}
+.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:linear-gradient(#fff,#f6f2e6);
+  border:1px solid var(--line);color:#7a6a4d;font-weight:700;margin-bottom:6px}
+h1{margin:.2em 0 .35em;font-family:"Noto Serif JP",serif;font-weight:700;
+  font-size:clamp(26px,4.1vw,42px);letter-spacing:.02em;line-height:1.25}
+.lead{color:#5f5a52;margin:0 0 10px}
+.hero-copy .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* 2枚並び（左右同高さ・上端揃え） */
+.duo-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;padding:6px 0 32px;align-items:start}
+.duo-box{height:clamp(280px,52vh,540px);border-radius:16px;border:1px solid var(--line);overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.duo-box img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+/* ヒーローの写真はアニメなし＝安定表示 */
+.hero .duo-box{opacity:1 !important;transform:none !important}
+
+@media (max-width:900px){
+  .duo-grid{grid-template-columns:1fr}
+  .duo-box{height:clamp(240px,46vh,440px)}
+}
+
+/* 共通UI */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:20px}
+.cols-2{grid-template-columns:1fr 1fr}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.cols-2,.cols-3{grid-template-columns:1fr}}
+h2{font-family:"Noto Serif JP",serif;font-weight:700;font-size:clamp(22px,3vw,32px);letter-spacing:.04em;margin:0 0 22px;position:relative;padding-left:14px}
+h2::before{content:"";position:absolute;left:0;top:.25em;height:1.35em;width:6px;border-radius:3px;background:linear-gradient(180deg,var(--gold),#ac8a4f)}
+.service{background:linear-gradient(180deg,#fff,#fbf7ec);border:1px solid var(--line);border-radius:14px;padding:18px;transition:transform .25s}
+.service:hover{transform:translateY(-2px)}
+.ph{aspect-ratio:4/3;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#f3eee2,#ece4d3)}
+.ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.01);transition:transform .5s ease}
+.ph:hover img{transform:scale(1.03)}
+table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+th{background:#fbf7ec}
+.mini{font-size:12px;color:#8b857a}
+.map{width:100%;aspect-ratio:16/10;border:0;border-radius:16px;box-shadow:var(--shadow)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:#6f6a66}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:800px){.meta{grid-template-columns:1fr}}
+
+/* 私たちの考え（空白ゼロ） */
+.policy-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:stretch}
+.policy-photos{display:grid;grid-template-rows:1fr 1fr 1fr;gap:16px}
+.policy-photos .tall{height:auto;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.policy-photos img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.policy-grid{grid-template-columns:1fr}.policy-photos{grid-template-rows:none;grid-template-columns:1fr 1fr;gap:12px}}
+
+/* 基本情報（右の余白を埋める） */
+.info-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:start}
+@media (max-width:900px){.info-grid{grid-template-columns:1fr}}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(24px);
+  transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.service:hover{transform:none}.ph img{transform:none}}
+</style>
+</head>
+<body>
+<!-- 営業時間バー -->
+<div class="topbar">
+  <div class="wrap">
+    <div>営業時間：<strong>9:00–19:00</strong>／<strong>不定休</strong></div>
+    <div>お電話：<a href="tel:0572222546">0572-22-2546</a></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="mark">綿</div>
+      <div>
+        <div class="brand-jp">松田ふとん店</div>
+        <div class="brand-sub">Matsuda Futonten</div>
+      </div>
+    </div>
+    <nav class="menu" aria-label="サイト内メニュー">
+      <a href="#services">サービス</a>
+      <a href="#process">打ち直しの流れ</a>
+      <a href="#wash">水丸洗い</a>
+      <a href="#gallery">店内</a>
+      <a href="#policy">私たちの考え</a>
+      <a href="#map">マップ</a>
+      <a href="#info">基本情報</a>
+    </nav>
+    <a class="btn-call" href="tel:0572222546" aria-label="電話 0572-22-2546">☎ 0572-22-2546</a>
+  </div>
+</header>
+
+<!-- HERO（コピー→写真の順／ズレ無し） -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <!-- キャッチコピー（写真の上に配置・重ねない） -->
+    <div class="hero-copy reveal">
+      <span class="badge">創業１００余年</span>
+      <h1>綿にこだわり お客様へ格別な寝心地をお届け</h1>
+      <p class="lead">地球にやさしく、体にやさしく、サイフにもやさしく。打ち直し・水丸洗い・羽毛リフォーム・寝具販売まで、地域密着でていねいに。</p>
+      <div class="cta">
+        <a class="btn-call" href="tel:0572222546">今すぐ相談する</a>
+        <a class="btn-ghost" href="#services">サービスを見る</a>
+      </div>
+    </div>
+    <!-- 写真2枚（左=image0／右=image3） -->
+    <div class="duo-grid">
+      <figure class="duo-box"><img src="image0.jpg" alt="松田ふとん店 外観"></figure>
+      <figure class="duo-box"><img src="image3.jpg" alt="綿仕事の様子"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- サービス -->
+<section id="services">
+  <div class="wrap">
+    <h2 class="reveal">サービス</h2>
+    <div class="grid cols-3">
+      <div class="service card reveal"><h3>綿打ち直し</h3><p>へたった綿ふとんをふっくら再生。側生地の新調やサイズ調整も。</p></div>
+      <div class="service card reveal" style="transition-delay:.05s"><h3>ふとん<strong>水丸洗い</strong></h3><p>南アルプスの天然水でやさしく洗浄。中わた内部の汗・皮脂汚れまで。</p></div>
+      <div class="service card reveal" style="transition-delay:.1s"><h3>羽毛布団リフォーム</h3><p>片寄り・ボリューム低下を改善。キルト・側生地を選べます。</p></div>
+      <div class="service card reveal" style="transition-delay:.15s"><h3>寝具販売</h3><p>本麻ケット・肌掛け、綿100%敷パッドなど天然素材を中心に。</p></div>
+      <div class="service card reveal" style="transition-delay:.2s"><h3>店主による目利き</h3><p>店主が直接拝見し、複式整綿機でご希望に沿った加工。</p></div>
+      <div class="service card reveal" style="transition-delay:.25s"><h3>集配（地域密着）</h3><p>引き取り・お届け無料。枕カバー1枚でもお持ちします。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 打ち直しの流れ -->
+<section id="process">
+  <div class="wrap">
+    <h2 class="reveal">打ち直しの流れ</h2>
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <div class="ph"><img src="image3.jpg" alt="綿の確認・選別" loading="lazy"></div>
+        <p><strong>1. 状態確認</strong><br><span class="mini">店主が直接拝見し、再生の方針をご提案。</span></p>
+      </div>
+      <div class="card reveal" style="transition-delay:.06s">
+        <div class="ph"><img src="image5.jpg" alt="複式整綿機による打ち直し" loading="lazy"></div>
+        <p><strong>2. 打ち直し</strong><br><span class="mini">複式整綿機でふっくら感を取り戻します。</span></p>
+      </div>
+      <div class="card reveal" style="transition-delay:.12s">
+        <div class="ph"><img src="image6.jpg" alt="仕立て・仕上げ" loading="lazy"></div>
+        <p><strong>3. 仕立て</strong><br><span class="mini">側生地・サイズを整えて仕上げ。お届けまで約10日。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 水丸洗い -->
+<section id="wash">
+  <div class="wrap">
+    <h2 class="reveal">ふとん「水丸洗い」</h2>
+    <div class="grid cols-2">
+      <div class="reveal">
+        <p>内側の汚れもすっきりキレイに！ ニオイや汗、アレルギーの原因となるダニの死骸なども、外側はもちろん中わた内部までさっぱり洗い流します。</p>
+        <table aria-label="水丸洗い料金（税別）">
+          <thead><tr><th>品目</th><th>料金（税別）</th></tr></thead>
+          <tbody>
+            <tr><td>シングル 掛け/敷き</td><td>3,400〜3,600円</td></tr>
+            <tr><td>ダブル 掛け/敷き</td><td>4,500円</td></tr>
+            <tr><td>シングル 羽毛掛け</td><td>5,000円</td></tr>
+            <tr><td>ダブル 羽毛掛け</td><td>6,000円</td></tr>
+            <tr><td>こたつ掛け（2m角）</td><td>2,800〜3,600円</td></tr>
+            <tr><td>こたつ掛け（暖卓）</td><td>3,300〜4,500円</td></tr>
+            <tr><td>毛布（シングル）</td><td>900〜1,800円</td></tr>
+            <tr><td>毛布（ダブル）</td><td>1,800〜2,200円</td></tr>
+          </tbody>
+        </table>
+        <p class="mini">※料金は税別／引き取り・お届け無料</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.08s">
+        <div class="ph"><img src="image1.jpg" alt="水丸洗い バナー" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 店内ギャラリー -->
+<section id="gallery">
+  <div class="wrap">
+    <h2 class="reveal">店内のようす</h2>
+    <div class="grid cols-3 reveal">
+      <div class="ph"><img src="image2.jpg" alt="店内1" loading="lazy"></div>
+      <div class="ph"><img src="image4.jpg" alt="店内2" loading="lazy"></div>
+      <div class="ph"><img src="image5.jpg" alt="機械1" loading="lazy"></div>
+      <div class="ph"><img src="image6.jpg" alt="機械2" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 私たちの考え（余白調整済み） -->
+<section id="policy">
+  <div class="wrap">
+    <h2 class="reveal">私たちの考え</h2>
+    <div class="policy-grid">
+      <div class="card reveal">
+        <ul>
+          <li>地球にやさしく、体にやさしく、サイフにもやさしく。</li>
+          <li>創業100余年・3代目。綿にこだわり、エコとリサイクルに携わって100余年。</li>
+          <li>天然素材中心（本麻ケット・肌掛け、綿100%敷パッドなど）。</li>
+          <li>「3年待ちの究極の布団」に近い仕立てを<strong>約10日</strong>で。</li>
+          <li>店主が直接判断し、多治見の複式整綿機で打ち直し加工。</li>
+          <li>水丸洗いは長野県下伊那郡の提携工場。引き取り・お届け無料。</li>
+          <li>地域密着。枕カバー1枚でもお届けします。</li>
+        </ul>
+      </div>
+      <div class="policy-photos reveal" style="transition-delay:.05s">
+        <div class="ph tall"><img src="image3.jpg" alt="綿仕事の様子" loading="lazy"></div>
+        <div class="ph tall"><img src="image5.jpg" alt="複式整綿機1" loading="lazy"></div>
+        <div class="ph tall"><img src="image6.jpg" alt="複式整綿機2" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- マップ -->
+<section id="map">
+  <div class="wrap">
+    <h2 class="reveal">マップ</h2>
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <p><strong>住所：</strong>〒507-0023 岐阜県多治見市小田町3丁目1</p>
+        <p><strong>アクセス：</strong>国道19号「弁天町」交差点から東へ30m</p>
+        <p><strong>駐車場：</strong>3台（無料）</p>
+        <p>
+          <a class="btn-ghost" target="_blank"
+             href="https://maps.google.com/?q=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%A4%9A%E6%B2%BB%E8%A6%8B%E5%B8%82%E5%B0%8F%E7%94%B0%E7%94%BA3%E4%B8%81%E7%9B%AE1">大きい地図を見る</a>
+          <a class="btn-ghost" target="_blank"
+             href="https://www.google.com/maps/dir//%E5%B2%90%E9%98%9C%E7%9C%8C%E5%A4%9A%E6%B2%BB%E8%A6%8B%E5%B8%82%E5%B0%8F%E7%94%B0%E7%94%BA3%E4%B8%81%E7%9B%AE1">ルート案内</a>
+        </p>
+        <p><a class="btn-call" href="tel:0572222546">☎ 電話する：0572-22-2546</a></p>
+      </div>
+      <iframe class="map reveal" loading="lazy"
+        src="https://www.google.com/maps?q=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%A4%9A%E6%B2%BB%E8%A6%8B%E5%B8%82%E5%B0%8F%E7%94%B0%E7%94%BA3%E4%B8%81%E7%9B%AE1&z=16&output=embed"
+        title="松田ふとん店の地図"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- 基本情報（最下部／iタウン文言なし） -->
+<section id="info">
+  <div class="wrap">
+    <h2 class="reveal">基本情報</h2>
+    <div class="info-grid">
+      <div class="card reveal">
+        <table>
+          <tbody>
+            <tr><th>掲載名</th><td>松田ふとん店</td></tr>
+            <tr><th>フリガナ</th><td>マツダフトンテン</td></tr>
+            <tr><th>電話番号</th><td><a href="tel:0572222546">0572-22-2546</a></td></tr>
+            <tr><th>FAX番号</th><td>－</td></tr>
+            <tr><th>住所</th><td>〒507-0023 岐阜県多治見市小田町３丁目１</td></tr>
+            <tr><th>アクセス</th><td>車／国道19号線「弁天町」交差点から東方面へ30m</td></tr>
+            <tr><th>駐車場</th><td>3台（無料）</td></tr>
+            <tr><th>現金以外の支払い</th><td>お取り扱いしておりません</td></tr>
+            <tr><th>ホームページ</th><td>－</td></tr>
+            <tr><th>E-mail</th><td>－</td></tr>
+            <tr><th>業種</th><td>羽毛製品、寝具店、ふとん丸洗いサービス、綿打ち直しサービス</td></tr>
+            <tr><th>営業時間</th><td>9:00～19:00</td></tr>
+            <tr><th>休業日</th><td>不定休</td></tr>
+            <tr><th>予約</th><td>予約可（電話で来店日・時間をお知らせください）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal">
+        <div class="ph" style="aspect-ratio:4/3;margin-bottom:14px;">
+          <img src="image0.jpg" alt="店舗外観（サブ）" loading="lazy">
+        </div>
+        <iframe class="map" loading="lazy"
+          src="https://www.google.com/maps?q=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%A4%9A%E6%B2%BB%E8%A6%8B%E5%B8%82%E5%B0%8F%E7%94%B0%E7%94%BA3%E4%B8%81%E7%9B%AE1&z=16&output=embed"
+          title="松田ふとん店の地図（基本情報）"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="meta">
+      <div>© <span id="y"></span> 松田ふとん店 — 営業時間：9:00–19:00／不定休</div>
+      <div style="text-align:right">製作者：鷲見哲哉</div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}})},{threshold:.14,rootMargin:"0px 0px -10% 0px"});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',ev=>{const id=a.getAttribute('href').slice(1),el=document.getElementById(id);if(el){ev.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}});
+    });
+  </script>
+</footer>
+</body>
+</html>
